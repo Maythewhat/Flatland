@@ -36,6 +36,7 @@ export class Page1Component implements OnInit {
   private line1: Path;
   private line2: Path;
   private line3: Path;
+  private gray = 0;
 
   private hasFinalShape1: boolean;
   private hasFinalShape2: boolean;
@@ -110,7 +111,6 @@ export class Page1Component implements OnInit {
     this.line3.add(new Point(this.line3.position.x, this.line3.position.y));
   }
 
-  private gray = 0;
   private frame3() {
     if (this.gray++ <= 255 * 2) {
       this.line1.strokeColor = new Color(this.gray / 2);
