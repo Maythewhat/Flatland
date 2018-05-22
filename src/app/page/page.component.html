@@ -1,0 +1,30 @@
+<div *ngIf="isLoading" class="loader animated fadeIn">
+  <img [src]="pageInfo.loaderSource" />
+  <div class="loader-text">
+    <div class="text">Chargement...</div>
+  </div>
+</div>
+<ng-container *ngIf="pageInfo && !isLoading">
+  <div class="layout animated fadeIn">
+    <div class="top">
+      <div class="title-block">
+        <div class="title">{{pageInfo.title}}</div>
+        <div class="page">Page {{pageInfo.pageNumber}}</div>
+      </div>
+      <div class="spacer"></div>
+      <div class="next">
+        next
+      </div>
+    </div>
+    <div class="spacer"></div>
+    <div class="bottom">
+      <div class="previous">previous</div>
+      <div class="stepper" [class.light]="pageInfo.light">
+        <div class="step" [class.selected]="step === pageInfo.pageNumber" (click)="goToPage(step)" *ngFor="let step of steps">
+          {{step}}
+        </div>
+      </div>
+    </div>
+  </div>
+  <img [src]="pageInfo.imageSource" />
+</ng-container>

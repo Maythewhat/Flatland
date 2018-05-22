@@ -1,0 +1,105 @@
+:host {
+    display: block;
+    height: 100%;
+    .loader {
+        height: 100%;
+        width: 100%;
+        position: relative;
+        .loader-text {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            z-index: 20;
+            .text {
+                padding: 12px;
+                font-size: 32px;
+                background: #000;
+                color: #fff;
+            }
+        }
+    }
+    img {
+        z-index: 10;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+    }
+    .layout {
+        padding: 24px;
+        height: 100%;
+        z-index: 20;
+        * {
+            z-index: 20;
+        }
+        display: flex;
+        flex-direction: column;
+        .top {
+            display: flex;
+            .title-block {
+                display: flex;
+                flex-direction: column;
+                background: #000;
+                color: #fff;
+                padding: 6px;
+                .title {
+                    font-weight: 300;
+                    font-size: 24px;
+                }
+                .page {
+                    font-size: 18px;
+                    font-style: italic;
+                }
+            }
+        }
+        .bottom {
+            display: flex;
+            justify-content: center;
+            .previous {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+            }
+            .stepper {
+                display: flex;
+                align-items: center;
+                &.light {
+                    .step {
+                        background: #fff;
+                        color: #000;
+                    }
+                }
+                .step {
+                    &.selected {
+                        width: 44px;
+                        height: 44px;
+                        font-size: 30px;
+                    }
+                    cursor: pointer;
+                    width: 30px;
+                    height: 30px;
+                    font-size: 20px;
+                    padding: 6px;
+                    margin: 0 6px;
+                    background: #000;
+                    color: #fff;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
+    }
+    .spacer {
+        flex: 1;
+    }
+}
