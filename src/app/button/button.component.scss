@@ -1,0 +1,12 @@
+:host {
+  display: inline-block;
+  &.back {
+    img {
+      transform-origin: 50% 50%;
+      transform: rotate(180deg);
+    }
+  }
+  img {
+    width: 80px;
+  }
+}

@@ -2,6 +2,9 @@
     display: block;
     height: 100%;
     .loader {
+        overflow: hidden;
+        background-size: cover;
+        background-position: center center;
         height: 100%;
         width: 100%;
         position: relative;
@@ -23,16 +26,37 @@
             }
         }
     }
-    img {
-        z-index: 10;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        position: absolute;
+    .next,
+    .previous {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        div {
+            font-size: 11px;
+            font-weight: 300;
+        }
+    }
+    .next {
+        align-items: flex-end;
+        div {
+            margin-right: 6px;
+            width: 80px;
+            text-align: right;
+        }
+    }
+    .previous {
+        div {
+            margin-left: 6px;
+            text-align: left;
+            width: 90px;
+        }
+    }
+    .content {
         width: 100%;
         height: 100%;
+        overflow: hidden;
         background-size: cover;
+        background-position: center center;
     }
     .layout {
         padding: 24px;
@@ -64,6 +88,7 @@
         .bottom {
             display: flex;
             justify-content: center;
+            position: relative;
             .previous {
                 position: absolute;
                 left: 0;
