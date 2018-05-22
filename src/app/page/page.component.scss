@@ -1,130 +1,132 @@
 :host {
-    display: block;
+  display: block;
+  height: 100%;
+  .loader {
+    overflow: hidden;
+    background-size: cover;
+    background-position: center center;
     height: 100%;
-    .loader {
-        overflow: hidden;
-        background-size: cover;
-        background-position: center center;
-        height: 100%;
-        width: 100%;
-        position: relative;
-        .loader-text {
-            position: absolute;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            right: 0;
-            z-index: 20;
-            .text {
-                padding: 12px;
-                font-size: 32px;
-                background: #000;
-                color: #fff;
-            }
-        }
+    width: 100%;
+    position: relative;
+    .loader-text {
+      font-weight: 300;
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      z-index: 20;
+      .text {
+        padding: 12px;
+        font-size: 32px;
+        background: #000;
+        color: #fff;
+      }
     }
-    .next,
-    .previous {
+  }
+  .next,
+  .previous {
+    display: flex;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    div {
+      font-size: 11px;
+      font-weight: 300;
+    }
+  }
+  .next {
+    align-items: flex-end;
+    div {
+      margin-right: 6px;
+      width: 80px;
+      text-align: right;
+    }
+  }
+  .previous {
+    div {
+      margin-left: 6px;
+      text-align: left;
+      width: 90px;
+    }
+  }
+  .content {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-position: center center;
+  }
+  .layout {
+    padding: 24px;
+    height: 100%;
+    z-index: 20;
+    * {
+      z-index: 20;
+    }
+    display: flex;
+    flex-direction: column;
+    .top {
+      display: flex;
+      .title-block {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        div {
-            font-size: 11px;
-            font-weight: 300;
+        background: #000;
+        color: #fff;
+        padding: 6px;
+        .title {
+          font-weight: 300;
+          font-size: 24px;
         }
-    }
-    .next {
-        align-items: flex-end;
-        div {
-            margin-right: 6px;
-            width: 80px;
-            text-align: right;
+        .page {
+          font-size: 18px;
+          font-style: italic;
         }
+      }
     }
-    .previous {
-        div {
-            margin-left: 6px;
-            text-align: left;
-            width: 90px;
-        }
-    }
-    .content {
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-        background-size: cover;
-        background-position: center center;
-    }
-    .layout {
-        padding: 24px;
-        height: 100%;
-        z-index: 20;
-        * {
-            z-index: 20;
-        }
+    .bottom {
+      display: flex;
+      justify-content: center;
+      position: relative;
+      .previous {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+      }
+      .stepper {
         display: flex;
-        flex-direction: column;
-        .top {
-            display: flex;
-            .title-block {
-                display: flex;
-                flex-direction: column;
-                background: #000;
-                color: #fff;
-                padding: 6px;
-                .title {
-                    font-weight: 300;
-                    font-size: 24px;
-                }
-                .page {
-                    font-size: 18px;
-                    font-style: italic;
-                }
-            }
+        align-items: center;
+        &.light {
+          .step {
+            background: #fff;
+            color: #000;
+          }
         }
-        .bottom {
-            display: flex;
-            justify-content: center;
-            position: relative;
-            .previous {
-                position: absolute;
-                left: 0;
-                bottom: 0;
-            }
-            .stepper {
-                display: flex;
-                align-items: center;
-                &.light {
-                    .step {
-                        background: #fff;
-                        color: #000;
-                    }
-                }
-                .step {
-                    &.selected {
-                        width: 44px;
-                        height: 44px;
-                        font-size: 30px;
-                    }
-                    cursor: pointer;
-                    width: 30px;
-                    height: 30px;
-                    font-size: 20px;
-                    padding: 6px;
-                    margin: 0 6px;
-                    background: #000;
-                    color: #fff;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                }
-            }
+        .step {
+          &.selected {
+            width: 44px;
+            height: 44px;
+            font-size: 30px;
+          }
+          font-weight: 300;
+          cursor: pointer;
+          width: 30px;
+          height: 30px;
+          font-size: 20px;
+          padding: 6px;
+          margin: 0 6px;
+          background: #000;
+          color: #fff;
+          display: flex;
+          justify-content: center;
+          align-items: center;
         }
+      }
     }
-    .spacer {
-        flex: 1;
-    }
+  }
+  .spacer {
+    flex: 1;
+  }
 }
