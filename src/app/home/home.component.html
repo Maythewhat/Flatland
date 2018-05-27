@@ -1,2 +1,18 @@
-VERSION 3
-<button (click)="goPage1()">GO PAGE 1</button>
+<div *ngIf="isLoading" class="loader animated fadeIn">
+  <div class="loader-text">
+    <div class="text">Constellations</div>
+  </div>
+</div>
+<div class="black-box main-box">
+  <div class="steps">
+    <div class="step" *ngFor="let i of pageIndexList" (click)="goPage(i)">
+      {{ i }}
+    </div>
+  </div>
+  Et si nous cherchions à réellement comprendre les dimensions ?
+</div>
+<div class="black-box second-box">
+  <div>
+    <span class="const">Constellations</span> est constitué d’un livre interactif et d’un site explicatif.</div>
+  <div class="objectifs"> Ses objectifs sont d’observer et comprendre les différentes dimensions de notre monde, puis les reproduire.</div>
+</div>

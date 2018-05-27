@@ -106,13 +106,13 @@
           }
         }
         .step {
+          transition: all 0.3s;
           &.selected {
             width: 44px;
             height: 44px;
             font-size: 30px;
           }
           font-weight: 300;
-          cursor: pointer;
           width: 30px;
           height: 30px;
           font-size: 20px;
@@ -123,6 +123,13 @@
           display: flex;
           justify-content: center;
           align-items: center;
+          &:hover {
+            background: #fff;
+            color: #000;
+            cursor: pointer;
+            border: solid 1px #000;
+            border-radius: 50%;
+          }
         }
       }
     }
