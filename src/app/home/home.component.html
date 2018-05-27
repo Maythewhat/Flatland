@@ -1,4 +1,4 @@
-<div *ngIf="isLoading" class="loader animated fadeIn">
+<div class="loader animated" [style.opacity]="isLoading ? 1 : 0" [style.z-index]="isLoading ? 100 : -1">
   <div class="loader-text">
     <div class="text">Constellations</div>
   </div>

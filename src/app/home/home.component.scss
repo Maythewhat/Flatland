@@ -1,88 +1,90 @@
 :host {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-height: 100%;
-  font-weight: 300;
-  overflow: auto;
-  position: relative;
-  .loader {
-    z-index: 100;
-    background-image: url('../../assets/img/home.svg');
-    overflow: hidden;
-    background-size: cover;
-    background-position: center center;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    .loader-text {
-      font-weight: 300;
-      position: absolute;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      z-index: 20;
-      .text {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 40vw;
-        height: 40vw;
-        border: solid 1px black;
-        padding: 12px;
-        font-size: 5vw;
-        background: #fff;
-        color: #000;
-      }
-    }
-  }
-  .steps {
-    top: -52px;
-    left: 24px;
-    position: absolute;
     display: flex;
-    .step {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 40px;
-      font-size: 32px;
-      margin-right: 12px;
-      color: #fff;
-      height: 40px;
-      background: #000;
-      transition: all 0.3s;
-      &:hover {
-        cursor: pointer;
-        color: #000;
-        background: #ccc;
-      }
-    }
-  }
-  .black-box {
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100%;
+    font-weight: 300;
+    overflow: auto;
     position: relative;
-    margin: 48px 0;
-    color: #fff;
-    background: #000;
-  }
-  .main-box {
-    text-align: center;
-    font-size: 60px;
-    padding: 20px;
-  }
-  .second-box {
-    font-size: 40px;
-    padding: 20px;
-    .const {
-      font-style: italic;
-      font-weight: 500;
+    .loader {
+        transition: all 1s;
+        background-image: url('../../assets/img/home.svg');
+        overflow: hidden;
+        background-size: cover;
+        background-position: center center;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        .loader-text {
+            font-weight: 300;
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            z-index: 20;
+            .text {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 40vw;
+                height: 40vw;
+                border: solid 1px black;
+                padding: 12px;
+                font-size: 5vw;
+                background: #fff;
+                color: #000;
+            }
+        }
     }
-    .objectifs {
-      margin-top: 48px;
+    .steps {
+        top: -52px;
+        left: 24px;
+        position: absolute;
+        display: flex;
+        .step {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            font-size: 32px;
+            margin-right: 12px;
+            color: #fff;
+            height: 40px;
+            background: #000;
+            transition: all 0.3s;
+            &:hover {
+                background: #fff;
+                color: #000;
+                cursor: pointer;
+                border: solid 1px #000;
+                border-radius: 50%;
+            }
+        }
     }
-  }
+    .black-box {
+        position: relative;
+        margin: 48px 0;
+        color: #fff;
+        background: #000;
+    }
+    .main-box {
+        text-align: center;
+        font-size: 60px;
+        padding: 20px;
+    }
+    .second-box {
+        font-size: 40px;
+        padding: 20px;
+        .const {
+            font-style: italic;
+            font-weight: 500;
+        }
+        .objectifs {
+            margin-top: 48px;
+        }
+    }
 }
